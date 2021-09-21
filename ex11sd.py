@@ -1,0 +1,7 @@
+print("Let's add two numbers.")
+print("number_1 = ", end='')
+number_1 = int(input())
+print("number_2 = ", end='')
+number_2 = int(input())
+print("\nresult is:")
+print(f"{number_1} + {number_2} = {number_1 + number_2}")
