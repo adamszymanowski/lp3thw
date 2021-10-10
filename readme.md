@@ -30,3 +30,15 @@ Maybe read [this thing about python3 unicode](https://docs.python.org/3/howto/un
 
 ### Exercise 26 - how to run
 `python3 ex26.py test.txt`
+
+### Exercise 46 - setup virtual environment - check skeleton directory
+1. make sure you're at `lp3thw/projects` directory
+2. `virtualenv --system-site-packages .`
+3. `. bin/activate`
+4. `pip install nose`
+5. `cd skeleton`
+6. `nosetests`
+
+
+# useful things
+`git status -uall`

@@ -1,1 +1,10 @@
 __pycache__/
+
+# exclude virtualenv stuff
+projects/bin/
+projects/lib/
+projects/pyvenv.cfg
+# exclude nose test stuff too
+projects/man
+# but keep project skeleton
+!projects/skeleton/
