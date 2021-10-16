@@ -1,5 +1,5 @@
 __pycache__/
-
+projects/*/__pycache__
 # exclude virtualenv stuff
 projects/bin/
 projects/lib/
