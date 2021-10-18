@@ -1,6 +1,7 @@
 # split sentence into words and return list of (token_name, word) tuples
+# handles CaPiTaLiZaTiOn by turning words into lowercase ones
 def scan(sentence):
-    words = [word for word in sentence.split()]
+    words = [word.lower() for word in sentence.split()]
     return [tokenize(word) for word in words]
 
 # not every token name can be stored in dict, so if you can't
