@@ -39,6 +39,9 @@ Maybe read [this thing about python3 unicode](https://docs.python.org/3/howto/un
 5. `cd skeleton`
 6. `nosetests`
 
+### Exercise 48, 49
+are combined and are in `/projects/ex48`
+
 
 # useful things
 `git status -uall`
