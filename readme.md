@@ -44,4 +44,8 @@ are combined and are in `/projects/ex48`
 
 
 # useful things
-`git status -uall`
+- `git status -uall`
+- `$VIRTUAL_ENV` to check your virtualenv [Determine if Python is running inside virtualenv](https://stackoverflow.com/questions/1871549/determine-if-python-is-running-inside-virtualenv)
+- activate/dectivate virtualenv
+  -  activate: `. projects/bin/activate` **NOTE** after it will add `(projects)` to console prompt 
+  - deactivate: `deactivate` **NOTE** added `(projects)` will disappear from console prompt
