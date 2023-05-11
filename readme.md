@@ -1,6 +1,15 @@
 # Learn Python 3 The Hard Way
 Me doing exercises from the book.
 
+**IMPORTANT NOTE** `projects/` should be run using Docker (the reason why is explained in *Exercise 46* section of this document). Any other exercise can be run from the docker too.
+
+To build Docker image just run:
+- `docker build -t lp3thw .`
+
+To enter interactive environment run:
+- `docker run -it -v ${PWD}:/usr/src/lp3thw lp3thw /bin/bash`
+
+## Exercise Notes
 ### Exercise 23 Python Session
 
 ```
@@ -32,6 +41,13 @@ Maybe read [this thing about python3 unicode](https://docs.python.org/3/howto/un
 `python3 ex26.py test.txt`
 
 ### Exercise 46 - setup virtual environment - check skeleton directory
+Instead of `venv` virtual environment I'm using a Docker image for running the `projects/` as `python 3.10` and above breaks things. 
+
+
+I'm leaving instruction for `venv` anyway, for sake of it:
+
+**OBSOLETE**
+
 Under Windows (PowerShell):
 1. `cd projects`
 2. `mkdir venv`
@@ -60,6 +76,9 @@ are combined and are in `/projects/ex48`
 - PowerShell downloading:
   * `Invoke-WebRequest -Uri https://learnpythonthehardway.org/python3/languages.txt -OutFile languages.txt`
   * `Invoke-WebRequest -Uri https://learnpythonthehardway.org/python3/exercise26.txt -OutFile ex26.py`
+
+
+- **OBSOLETE**
 - `$VIRTUAL_ENV` to check your virtualenv [Determine if Python is running inside virtualenv](https://stackoverflow.com/questions/1871549/determine-if-python-is-running-inside-virtualenv)
 - activate/dectivate virtualenv
   - Windows Powershell:
