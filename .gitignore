@@ -1,9 +1,7 @@
 __pycache__/
 projects/*/__pycache__
 # exclude virtualenv stuff
-projects/bin/
-projects/lib/
-projects/pyvenv.cfg
+projects/venv
 # exclude nose test stuff too
 projects/man
 # but keep project skeleton

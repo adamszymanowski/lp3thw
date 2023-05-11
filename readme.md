@@ -32,9 +32,21 @@ Maybe read [this thing about python3 unicode](https://docs.python.org/3/howto/un
 `python3 ex26.py test.txt`
 
 ### Exercise 46 - setup virtual environment - check skeleton directory
-1. make sure you're at `lp3thw/projects` directory
-2. `virtualenv --system-site-packages .`
-3. `. bin/activate`
+Under Windows (PowerShell):
+1. `cd projects`
+2. `mkdir venv`
+2. `virtualenv --system-site-packages venv/lp3thw`
+3. `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+4. `venv/lp3thw/Scripts/activate`
+5. `pip install nose`
+6. `cd skeleton`
+7. `nosetests`
+
+Linux is probably:
+1. `cd projects`
+2. `mkdir venv`
+2. `virtualenv --system-site-packages venv/lp3thw`
+3. `venv/lp3thw/bin/activate`
 4. `pip install nose`
 5. `cd skeleton`
 6. `nosetests`
@@ -50,5 +62,14 @@ are combined and are in `/projects/ex48`
   * `Invoke-WebRequest -Uri https://learnpythonthehardway.org/python3/exercise26.txt -OutFile ex26.py`
 - `$VIRTUAL_ENV` to check your virtualenv [Determine if Python is running inside virtualenv](https://stackoverflow.com/questions/1871549/determine-if-python-is-running-inside-virtualenv)
 - activate/dectivate virtualenv
-  - activate: `. projects/bin/activate` **NOTE** after it will add `(projects)` to console prompt 
-  - deactivate: `deactivate` **NOTE** added `(projects)` will disappear from console prompt
+  - Windows Powershell:
+    - `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+    - activate: `. projects/bin/activate` **NOTE** after it will add `(lp3thw)` to console prompt 
+    - deactivate: `deactivate` **NOTE** added `(lp3thw)` will disappear from console prompt
+  - Linux (probably)
+  - activate: `. projects/bin/activate` **NOTE** after it will add `(lp3thw)` to console prompt 
+  - deactivate: `deactivate` **NOTE** added `(lp3thw)` will disappear from console prompt
+
+- Error while running `nosetests`: `AttributeError: module 'collections' has no attribute 'Callable'`
+- Caused (as described in link below) by 3.10 moving `collections.Callable` to `collections.abc.Callable`
+- [AttributeError: module 'collections' has no attribute 'Callable'](https://stackoverflow.com/questions/69515086/error-attributeerror-collections-has-no-attribute-callable-using-beautifu)
