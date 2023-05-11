@@ -22,3 +22,4 @@ func_call(square, number)
 print_something(square)
 func_call(print_something, square)
 
+
