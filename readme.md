@@ -43,9 +43,12 @@ Maybe read [this thing about python3 unicode](https://docs.python.org/3/howto/un
 are combined and are in `/projects/ex48`
 
 
-# useful things
+# Useful tips, commands and references
 - `git status -uall`
+- PowerShell downloading:
+  * `Invoke-WebRequest -Uri https://learnpythonthehardway.org/python3/languages.txt -OutFile languages.txt`
+  * `Invoke-WebRequest -Uri https://learnpythonthehardway.org/python3/exercise26.txt -OutFile ex26.py`
 - `$VIRTUAL_ENV` to check your virtualenv [Determine if Python is running inside virtualenv](https://stackoverflow.com/questions/1871549/determine-if-python-is-running-inside-virtualenv)
 - activate/dectivate virtualenv
-  -  activate: `. projects/bin/activate` **NOTE** after it will add `(projects)` to console prompt 
+  - activate: `. projects/bin/activate` **NOTE** after it will add `(projects)` to console prompt 
   - deactivate: `deactivate` **NOTE** added `(projects)` will disappear from console prompt
